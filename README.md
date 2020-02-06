@@ -1,7 +1,21 @@
 # Dmitriy Melnichuk
-Sites for learning
+## Sites for learning
+### Task
 
-[Creativia](DimaMelnichuk.github.io/Creativia/ "first site")
-[Brunch](DimaMelnichuk.github.io/Bunch/ "second site")
-[go-surf](DimaMelnichuk.github.io/go-surf/ "learning site")
+Make up a difficult websites with learning unknown elements
+
+## [go-surf](DimaMelnichuk.github.io/go-surf/ "third site")
+
+#### Learned
+
+* work with svg and animated svg
+* responsive slick and syncing slick
+* calculator night + day = sum
+* rating
+* drops on the map
+
+## [Brunch](DimaMelnichuk.github.io/Bunch/ "second site")
+
+##[Creativia](DimaMelnichuk.github.io/Creativia/ "first site")
+
 

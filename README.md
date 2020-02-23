@@ -2,22 +2,22 @@
 ## [Portfolio](DimaMelnichuk.github.io/Portfolio_v1.3/ "Portfolio")
 
 ## Sites for learning
-### Task
-
-Make up a difficult websites with learning unknown elements
 
 ## [go-surf](DimaMelnichuk.github.io/go-surf/ "third site")
 
-#### Learned
+### Task
+Make up a difficult websites with learning unknown elements
 
+#### Learned
 * work with svg and animated svg
 * responsive slick and syncing slick
 * calculator night + day = sum
 * rating
 * drops on the map
 
-## [Brunch](DimaMelnichuk.github.io/Bunch/ "second site")
 
-##[Creativia](DimaMelnichuk.github.io/Creativia/ "first site")
+##[Game Blocks](DimaMelnichuk.github.io/game-css/ "first game")
+
+
 
 

@@ -1,11 +1,12 @@
 $(function(){
 
 	/***************** Popup ********************/
-	$('.popup').magnificPopup({
+	$('.popup__link').magnificPopup({
 	});
 	/***************** Menu-btn ********************/
 	$(".menu__burger").click(function(event){
 		$(".menu__burger,.menu").toggleClass("active");
+		$("body").toggleClass("active");
 	});
 	
 	/***************** Header BG Scroll ******************/
@@ -14,12 +15,12 @@ $(function(){
 		  var scroll = $(window).scrollTop();
 	
 		  if (scroll >= 20) {
-			$('.header').addClass('fixed');
+			$('.header').addClass('header--fixed');
 			$('.header__inner').css({
 			  "height": "60px",
 			});
 		  } else {
-			$('.header').removeClass('fixed');
+			$('.header').removeClass('header--fixed');
 			$('.header__inner').css({
 			  "height": "80px",
 			});

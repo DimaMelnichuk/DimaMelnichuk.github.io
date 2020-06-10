@@ -108,7 +108,43 @@
 
 				<!-- work__item -->
 				<div class="work__item">
-					<a href="#form_5" class="popup__link">
+					<a href="#form_7" class="popup__link">
+						<div class="work__item-box">
+							<img class="work__item-img" src="img/works/alpine.jpg" alt="Robuta">
+						</div>
+						<div class="work__item-overlay">
+							<svg class="work__item-icon">
+								<use xlink:href="img/sprite.svg#magnifying-glass"></use>
+							</svg>
+							<div class="work__item-title">Alpine</div>
+						</div>
+					</a>
+					<div class="popup--hidden">
+						<form class="popup" id="form_7">
+							<div class="popup__content">
+								<div class="popup__header">
+									<div class="popup__header-text">Alpine</div>
+								</div>
+								<div class="popup__box">
+									<img class="popup__box-img" src="img/works/alpine.jpg" alt="Robuta">
+								</div>
+								<div class="popup__descr">
+									Analyzing and diving design mockups for creating appropriate UI components and architecting
+									the styles codebase.
+								</div>
+								<a class="btn popup__btn" href="https://github.com/DimaMelnichuk/alpine/tree/master"
+									target="_blank">Open code</a>
+								<a class="btn popup__btn" href="https://dimamelnichuk.github.io/alpine/"
+									target="_blank">Open site</a>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- work__item end -->
+
+				<!-- work__item -->
+				<div class="work__item">
+					<a href="#form_6" class="popup__link">
 						<div class="work__item-box">
 							<img class="work__item-img" src="img/works/robuta.jpg" alt="Robuta">
 						</div>
@@ -120,7 +156,7 @@
 						</div>
 					</a>
 					<div class="popup--hidden">
-						<form class="popup" id="form_5">
+						<form class="popup" id="form_6">
 							<div class="popup__content">
 								<div class="popup__header">
 									<div class="popup__header-text">Robuta</div>
@@ -324,7 +360,6 @@
 	</section>
 	<!-- work end-->
 
-
 	<!-- touch -->
 	<section class="feedback">
 		<div class="container">
@@ -341,36 +376,13 @@
 
 	<!-- footer -->
 	<footer class="footer">
-		<ul class="footer__list">
-			<li class="footer__list-item">
-				<a class="social-media__link" href="https://github.com/DimaMelnichuk" target="_blank" title="GitHub">
-					<svg class="social-media__icon">
-						<use xlink:href="../img/sprite.svg#github"></use>
-					</svg>
-				</a>
-			</li>
-			<li class="footer__list-item">
-				<a class="social-media__link" href="https://t.me/eng_WDYM" target="_blank" title="Telegram">
-					<svg class="social-media__icon">
-						<use xlink:href="../img/sprite.svg#telegram"></use>
-					</svg>
-				</a>
-			</li>
-			<li class="footer__list-item">
-				<a class="social-media__link" href="#" target="_blank" title="LinkedIn">
-					<svg class="social-media__icon">
-						<use xlink:href="../img/sprite.svg#linkedin"></use>
-					</svg>
-				</a>
-			</li>
-		</ul>
 		<div class="footer__name">Dmitry Melnichuk</div>
 	</footer>
 	<!-- footer end-->
 
 	<!-- social-links -->
 	<div class="social-media animated fadeIn" style="animation-delay: 500ms;">
-		<ul class="social-media__list">
+		<ul class="social-media__list content__block_item">
 			<li class="social-media__item">
 				<a class="social-media__link" href="https://github.com/DimaMelnichuk" target="_blank" title="GitHub">
 					<svg class="social-media__icon">
@@ -409,9 +421,10 @@
 	</script> -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/libs.min.js"></script>
+	<script src="js/dynamic_adapt.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/svg4everybody.min.js"></script>
-	<script>svg4everybody(); // run it now or whenever you are ready</script>
+	<script>svg4everybody();</script>
 </body>
 
 </html>

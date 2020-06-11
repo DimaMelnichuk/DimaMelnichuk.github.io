@@ -13,10 +13,8 @@
 
 	&__item {
 		flex: 0 0 31%;
-
 		margin: 10px 10px 10px 10px;
 		position: relative;
-		cursor: pointer;
 
 		@media (max-width: 1190px) {
 			flex: 0 0 46%;
@@ -30,17 +28,23 @@
 			flex: 0 0 100%;
 			margin: 15px 0 15px 0;
 		}
-		
-		&:hover .work__item-overlay {
-			opacity: 1;
-		}
 
-		&:hover .work__item-icon {
-			transform: translateY(-15px);
-		}
+		&:hover {
+			.work__item-overlay {
+				opacity: 1;
+			}
 
-		&:hover .work__item-title {
-			transform: translateY(0);
+			.work__item-icon {
+				transform: translateY(-15px);
+			}
+
+			.work__item-title {
+				transform: translateY(0);
+			}
+
+			.work__item-btn {
+				transform: translateY(0);
+			}
 		}
 		 
 	} 
@@ -58,6 +62,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+
 	}
 
 	&__item-overlay {
@@ -84,13 +89,35 @@
 
 	&__item-title {
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		width: 100%;
 		padding: 10px;
 		background-color: $accent-secondary;
 		color: $white;
+		transform: translateY(-40px);
+		transition: all .5s;
+	 }
+
+	 &__item-footer {
+		display: flex;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	 }
+
+	 &__item-btn {
+		position: relative;
+		flex: 0 1 50%;
+		padding: 10px;
+		background-color: $accent-secondary;
+		color: $white;
 		transform: translateY(40px);
 		transition: all .5s;
+
+		&:hover {
+			background-color:$color-hover;
+		}
 	 }
 }

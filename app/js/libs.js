@@ -1,1 +1,0 @@
-@@include('libs/svg4everybody.js')

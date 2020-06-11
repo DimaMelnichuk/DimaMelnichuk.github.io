@@ -1,0 +1,60 @@
+.about {
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 750px) {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+	}
+
+	&__info {
+		flex: 0 0 50%;
+		margin: 0 20px 0 0;
+
+		@media (max-width: 750px) {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&__box {
+		flex: 0 1 30%;
+		text-align: center;
+	}
+
+	&__box-img  {
+		width: 100%;
+		min-width: 300px;
+
+		@media (max-width: 750px) {
+			width: 40%;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(140px, 200px));
+		margin: 20px 0 0 0;
+		overflow: hidden;
+	}
+
+	&__item {
+		position: relative;
+		margin: 0 0 10px 15px;
+
+		&::before {
+		  content: "▹";
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  left: -15px;
+		  color: $color-hover;
+		  font-size: 14px;
+		  line-height: 12px;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.footer {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: $accent-secondary;
+ 
+	@media (max-width: 770px) {
+	 height: 80px;
+	}
+ 
+ }
+ 

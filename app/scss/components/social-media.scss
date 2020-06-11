@@ -10,7 +10,7 @@
 
 	&__list {
 
-		@media (max-width: 770px) {
+		@media (max-width: 830px) {
 			display: flex;
 		}
 	}
@@ -23,7 +23,7 @@
 		display: block;
 		margin: 0 auto;
 
-		@media (max-width: 770px) {
+		@media (max-width: 830px) {
 			display: none;
 		}
 	}
@@ -34,7 +34,7 @@
 		margin-bottom: 25px;
 		transition: transform .3s;
 
-		@media (max-width: 770px) {
+		@media (max-width: 830px) {
 			margin-bottom: 10px;
 		}
 	}
@@ -59,9 +59,6 @@
 		transition: fill .3s ease;
 	}
 }
-
-
-
 
 .email {
 	position: fixed;

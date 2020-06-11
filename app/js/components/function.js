@@ -56,3 +56,5 @@ function ibg(){
 	}
 }
 ibg();
+
+new WOW().init();

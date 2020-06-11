@@ -1,4 +1,9 @@
 .main-screen {
+	padding: 150px 0 150px 0;
+
+	@media (max-width: 830px) {
+		padding: 150px 0 100px 0;
+	}
 
 	&__text {
 		margin-bottom: 45px;

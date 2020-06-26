@@ -40,21 +40,3 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('webp');
 	}
 });
-
-/***************** loaded ********************/
-if (document.querySelector('.wrapper')) {
-	document.querySelector('.wrapper').classList.add('loaded');
-}
-
-/***************** ibg adaptive inline bg ********************/
-function ibg(){
-	let ibg=document.querySelectorAll(".ibg");
-	for (var i = 0; i < ibg.length; i++) {
-		if(ibg[i].querySelector('img')){
-			ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
-		}		
-	}
-}
-ibg();
-
-new WOW().init();

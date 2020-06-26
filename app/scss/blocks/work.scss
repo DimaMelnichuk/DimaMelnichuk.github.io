@@ -62,7 +62,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-
 	}
 
 	&__item-overlay {
@@ -73,10 +72,14 @@
 		opacity: 0;
 		height: 100%;
 		text-align: center;
-		padding-top: 90px;
 		transition: opacity .3s;
 		background-color: rgba($color-hover, .5);
 		overflow: hidden;
+
+		@media (max-width: 768px) {
+			overflow: visible;
+			opacity: 1;
+		}
 	}
 
 	&__item-icon {
@@ -97,6 +100,10 @@
 		color: $white;
 		transform: translateY(-40px);
 		transition: all .5s;
+
+		@media (max-width: 768px) {
+			transform: translateY(0);
+		}
 	 }
 
 	 &__item-footer {
@@ -115,6 +122,10 @@
 		color: $white;
 		transform: translateY(40px);
 		transition: all .5s;
+
+		@media (max-width: 768px) {
+			transform: translateY(0);
+		}
 
 		&:hover {
 			background-color:$color-hover;

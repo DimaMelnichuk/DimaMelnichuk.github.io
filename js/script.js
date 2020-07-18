@@ -21,9 +21,11 @@ function myFunction() {
 /***************** Menu-btn ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
+let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
+	menu_lock.classList.toggle('lock');
 });
 
 
@@ -41,138 +43,30 @@ testWebP(function (support) {
 	}
 });
 
-/***************** loaded ********************/
-if (document.querySelector('.wrapper')) {
-	document.querySelector('.wrapper').classList.add('loaded');
-}
+//Объявляем переменные
+const parent_original = document.querySelector('.social-media__list');
+const parent = document.querySelector('.footer');
+const item = document.querySelector('.content__block_item');
 
-/***************** ibg adaptive inline bg ********************/
-function ibg(){
-	let ibg=document.querySelectorAll(".ibg");
-	for (var i = 0; i < ibg.length; i++) {
-		if(ibg[i].querySelector('img')){
-			ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
-		}		
-	}
-}
-ibg();
-const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
+//Слушаем изменение размера экрана
+window.addEventListener('resize', move);
 
-let unlock = true;
-
-const timeout = 800;
-
-if (popupLinks.length > 0) {
-	for (let index = 0; index < popupLinks.length; index++) {
-		const popupLink = popupLinks[index];
-		popupLink.addEventListener("click", function (e) {
-			const popupName = popupLink.getAttribute('href').replace('#', '');
-			const curentPopup = document.getElementById(popupName);
-			popupOpen(curentPopup);
-			e.preventDefault();
-		});
-	}
-}
-
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-	for (let index = 0; index < popupCloseIcon.length; index++) {
-		const el = popupCloseIcon[index];
-		el.addEventListener("click", function (e) {
-			popupClose(el.closest('.popup'));
-			e.preventDefault();
-		});
-	}
-}
-
-function popupOpen(curentPopup) {
-	if (curentPopup && unlock) {
-		const popupActive = document.querySelector('.popup.open');
-		if (popupActive) {
-			popupClose(popupActive, false);
-		} else {
-			bodyLock();
+//Функция
+function move(){
+	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if (viewport_width <= 830) {
+		if (!item.classList.contains('done')) {
+			parent.insertBefore(item, parent.children[0]);
+			item.classList.add('done');
 		}
-		curentPopup.classList.add('open');
-		curentPopup.addEventListener("click", function (e) {
-			if (!e.target.closest('.popup__content')) {
-				popupClose(e.target.closest('.popup'));
-			}
-		});
-	}
-}
-
-function popupClose(popupActive, doUnlock = true) {
-	if (unlock) {
-		popupActive.classList.remove('open');
-		if (doUnlock) {
-			bodyLock();
+	} else {
+		if (item.classList.contains('done')) {
+			parent_original.insertBefore(item, parent_original.children[0]);
+			item.classList.remove('done');
 		}
 	}
 }
 
-function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+//Вызываем функцию
+move();
 
-	if (lockPadding.length > 0) {
-		for (let index = 0; index < lockPadding.length; index++) {
-			const el = lockPadding[index];
-			el.style.paddingRight = lockPaddingValue;
-		}
-	}
-	body.style.paddingRight = lockPaddingValue;
-	body.classList.add('lock');
-
-	unlock = false;
-	setTimeout(function () {
-		unlock = true;
-	}, timeout);
-}
-
-function bodyUnLock() {
-	setTimeout(function () {
-		if (lockPadding.length > 0) {
-			for (let index = 0; index < lockPadding.length; index++) {
-				const el = lockPadding[index];
-				el.style.paddingRight = '0px';
-			}
-		}
-		body.style.paddingRight = '0px';
-		body.classList.remove('lock');
-	}, timeout);
-
-	unlock = false;
-	setTimeout(function () {
-		unlock = true;
-	}, timeout);
-}
-
-document.addEventListener('keydown', function (e) {
-	if (e.which === 27) {
-		const popupActive = document.querySelector('.popup.open');
-		popupClose(popupActive);
-	}
-});
-
-(function () {
-	if (!Element.prototype.closest) {
-		Element.prototype.closest = function (css) {
-			var node = this;
-			while (node) {
-				if (node.matches(css)) return node;
-				else node = node.parentElement;
-			}
-			return null;
-		};
-	}
-})();
-(function () {
-	if (!Element.prototype.matches) {
-		Element.prototype.matches = Element.prototype.matchesSelector ||
-			Element.prototype.webkitMatchesSelector ||
-			Element.prototype.mozMatchesSelector ||
-			Element.prototype.msMatchesSelector;
-	}
-})();

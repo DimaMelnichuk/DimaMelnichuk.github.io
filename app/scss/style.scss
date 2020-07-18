@@ -76,14 +76,18 @@ body.lock {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-
-	&.loaded {
-
-	}
 }
 
 .main-screen {
 	position: relative;
+	padding: 150px 0 150px 0;
+
+	@media (max-width: 830px) {
+		padding: 150px 0 100px 0;
+	}
+	@media (max-width: 480px) {
+		padding: 100px 0px 25px 0;
+	}
 	
 	&__bg {
 		position: absolute;
@@ -94,34 +98,22 @@ body.lock {
 	}
 }
 
-._ibg{
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	img{
-		display: none;
-	}
-}
-
 .page {
 	flex: 1 1 auto;
-
-	& > div:not(:nth-child(1)) {
-		padding: 150px 0 150px 0;
-
-		@media (max-width: 830px) {
-			padding: 100px 0 100px 0;
-		}
-	
-		@media (max-width: 480px) {
-			padding: 50px 0 50px 0;
-		}
-	}
 }
 
-.main-screen {
+.about,
+.work,
+.feedback {
+	padding: 150px 0 150px 0;
 
+	@media (max-width: 830px) {
+		padding: 100px 0 100px 0;
+	}
 
+	@media (max-width: 480px) {
+		padding: 25px 0 25px 0;
+	}
 }
 
 .title {

@@ -1,0 +1,28 @@
+.scroll-up {
+	position: fixed;
+	z-index: 1000;
+	bottom: 25px;
+	right: 10px;
+	width: 40px;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transition: .2s ease;
+	transform: translateY(25px);
+
+	@media (max-width: 1024px) {
+		bottom: 20px;
+    	right: 7px;
+   	width: 35px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	&--active {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -55,6 +55,16 @@ body.night {
 	a {
 		color: #e7e7e7;
 	}
+
+	.switch-wrapper__sun {
+		background: url(../img/icons/sun-white.svg) no-repeat center;
+		background-size: 100%;
+	}
+
+	.switch-wrapper__moon {
+		background: url(../img/icons/moon-white.svg) no-repeat center;
+		background-size: 100%;
+	}
 }
 .icon {
 	width: 17px;

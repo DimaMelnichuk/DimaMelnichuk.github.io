@@ -165,3 +165,12 @@ body.night {
 		padding: 30px 0px 0px 30px;
 	}
 }
+
+.animation {
+	opacity: 0;
+	transition: all .4s linear .2s;
+
+	&.active {
+		opacity: 1;
+	}
+}

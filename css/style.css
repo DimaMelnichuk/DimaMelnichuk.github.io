@@ -4811,16 +4811,14 @@ body.night .switch-wrapper__moon {
   max-width: 650px;
 }
 
-.animation {
-  opacity: 0;
-  -webkit-transition: all .4s linear .2s;
-  -o-transition: all .4s linear .2s;
-  transition: all .4s linear .2s;
-}
+/* .animation {
+	opacity: 0;
+	transition: all .4s linear .2s;
 
-.animation.active {
-  opacity: 1;
-}
+	&.active {
+		opacity: 1;
+	}
+} */
 
 @media (max-width: 1280px) {
   .container {

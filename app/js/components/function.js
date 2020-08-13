@@ -6,10 +6,8 @@
 		const isChecked = input.checked;
 		if (isChecked) {
 			body.classList.remove('night');
-			toggle.classList.remove('active');
 		} else {
 			body.classList.add('night');
-			toggle.classList.add('active');
 		}
 	});
 

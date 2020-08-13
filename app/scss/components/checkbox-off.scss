@@ -1,53 +1,52 @@
-.switch-wrapper {
-	
-	&__toggle {
+.checkbox-off {
+
+	&__label {
+		position: relative;
 		margin: 10px;
-<<<<<<< HEAD
-=======
 		padding-right: 50px;
 		cursor: pointer;
 		font-size: 20px;
 		user-select: none;
 	}
->>>>>>> parent of e9877f47... Add animation
 
-		#switch {
-			height: 0;
-			width: 0;
-			visibility: hidden;
-			position: absolute;
-			
-			&:checked+label {
-				background: #007bff;
-	
-				&:after {
-					left: calc(100% - 3px);
-					transform: translateX(-100%);
-				}
-			}
-		}
+	&__input {
+		position: absolute;
+		opacity: 0;
+		height: 0;
+		width: 0;
 	}
 
-	label {
+	&__checkmark {
+		position: absolute;
 		cursor: pointer;
-		text-indent: -9999px;
-		width: 45px;
+		top: 0;
+		left: 0;
 		height: 25px;
+		width: 45px;
 		background: grey;
-		display: block;
-		border-radius: 100px;
-		position: relative;
+		border-radius: 54px;
+		transition: all .3s ease-in-out;
 
 		&:after {
-			transition: all .2s ease-in-out;
-			content: '';
+			content: "";
 			position: absolute;
+			display: block;
+			border-radius: 100%;
+			background: white;
 			top: 3px;
 			left: 3px;
 			width: 19px;
 			height: 19px;
-			background: #fff;
-			border-radius: 100%;
+			transition: all .3s ease-in-out;
+		}
+
+		&.active {
+			background: #2196F3;
+		}
+
+		&.active:after {
+			left: calc(100% - 3px);
+    		transform: translateX(-100%);
 		}
 	}
 }

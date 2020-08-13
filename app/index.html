@@ -9,13 +9,15 @@
 
 		<main class="page">
 
-			<div class="switch-wrapper"> 
-				<div class="switch-wrapper__sun"></div> 
-				<div class="switch-wrapper__toggle"> 
-					<input class="switch-wrapper__input" id="switch" type="checkbox" checked> 
-					<label class="switch-wrapper__label" for="switch" id="toggle">Toggle</label>
-				</div> 
-				<div class="switch-wrapper__moon"></div> 
+			<div class="switch-wrapper">
+				<div class="switch-wrapper__sun"></div>
+				<div class="checkbox-off">
+					<label class="checkbox-off__label">
+						<input class="checkbox-off__input active" id="switch" type="checkbox" checked>
+						<span class="checkbox-off__checkmark active" id="toggle" checked></span>
+					</label>
+				</div>
+				<div class="switch-wrapper__moon"></div>
 			</div>
 			@@include('_header.html')
 			<div class="about container">

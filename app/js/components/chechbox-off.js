@@ -20,11 +20,10 @@ const input = document.getElementById('switch');
 toggle.addEventListener('click', function() {
 	const isChecked = input.checked;
 	if (isChecked) {
-		body.classList.add('night');
-		toggle.classList.add('active');
-
-	} else {
 		body.classList.remove('night');
 		toggle.classList.remove('active');
+	} else {
+		body.classList.add('night');
+		toggle.classList.add('active');
 	}
 });

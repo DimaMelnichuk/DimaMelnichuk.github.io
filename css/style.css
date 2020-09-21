@@ -4378,9 +4378,6 @@
 }
 
 .work__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   margin: 0px 0px 100px 0px;
 }
@@ -4400,13 +4397,31 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-  margin-left: 30px;
+  margin-top: 25px;
+  width: 100%;
 }
 
 .work__descr-title {
-  display: block;
-  margin-bottom: 10px;
   font-weight: 700;
+}
+
+.work__descr-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.work__descr-list li {
+  font-size: 1.01rem;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin: 7px 7px 0px 0px;
 }
 
 .work__descr-text {
@@ -4447,7 +4462,16 @@
           transform: translateX(7px);
 }
 
-.skills__items li {
+.skills__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills__list-item {
   margin: 3px 0;
   font-size: .9rem;
 }
@@ -4728,6 +4752,10 @@ body.night {
   color: #afafbf;
 }
 
+body.night .skills__category-label {
+  color: #e7e7e7;
+}
+
 body.night .intro {
   color: #e7e7e7;
 }
@@ -4881,23 +4909,6 @@ body.night .switch-wrapper__moon {
     font-size: 2rem;
   }
 
-  .work__item {
-    width: 100%;
-    display: block;
-    margin-bottom: 70px;
-  }
-
-  .work__descr {
-    width: 100%;
-    margin-top: 25px;
-    margin-left: 0;
-  }
-
-  .work__descr-text {
-    font-size: 1rem;
-    line-height: 1;
-  }
-
   .container {
     display: block;
   }
@@ -4913,13 +4924,37 @@ body.night .switch-wrapper__moon {
   }
 
   .content {
-    padding: 30px 0px 0px 30px;
+    padding: 30px 0px 0px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .work__item {
+    margin-bottom: 70px;
+  }
+
+  .work__descr-list li {
+    font-size: .90rem;
+  }
+
+  .work__descr-text {
+    font-size: 1rem;
+    line-height: 1;
   }
 }
 
 @media (max-width: 630px) {
   .intro {
     padding: 120px 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -4961,6 +4996,12 @@ body.night .switch-wrapper__moon {
 
   .container {
     padding: 50px 35px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .work__descr-list li {
+    font-size: .75rem;
   }
 }
 

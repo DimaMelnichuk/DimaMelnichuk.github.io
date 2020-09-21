@@ -44,6 +44,10 @@ body.night {
 	background-color: #171c28;
 	color: #afafbf;
 
+	.skills__category-label {
+		color: #e7e7e7;
+	}
+
 	.intro {
 		color: #e7e7e7;
 	}
@@ -162,7 +166,7 @@ body.night {
 	max-width: 650px;
 
 	@media (max-width: 768px) {
-		padding: 30px 0px 0px 30px;
+		padding: 30px 0px 0px 20px;
 	}
 }
 

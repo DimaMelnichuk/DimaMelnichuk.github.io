@@ -15,14 +15,14 @@ let path = {
 		html: [source_folder + "/**/*.html", "!" + source_folder + "/**/_*.html"],
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/*.js",
-		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/**/*",
 	},
 	watch: {
 		html: source_folder + "/**/*.html",
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
-		img: source_folder + "/img/**/*.(png,jpg,gif,ico,svg,webp)",
+		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
 	},
 	clean: "./" + project_folder + "/"
 }
@@ -42,7 +42,6 @@ let {src, dest} = require('gulp'),
 	webp = require("gulp-webp"),
 	webphtml = require('gulp-webp-html'),
 	webpscss = require('gulp-webpcss'),
-	svgSprite = require('gulp-svg-sprite'),
 	ghPages = require('gh-pages'),
 	pathPages = require('path');
 
@@ -121,20 +120,6 @@ function fonts() {
 	return src(path.src.fonts)
 		.pipe(dest(path.build.fonts))
 };
-
-gulp.task('svgSprite', function() {
-	return gulp.src([source_folder + '/img/iconsprite/*.svg'])
-	.pipe(svgSprite({
-			mode: {
-				stack: {
-					sprite: "../icons/icons.svg",
-					example: true
-				}
-			},
-		}
-		))
-		.pipe(dest(path.build.img))
-})
 
 function watchFiles(params) {
 	gulp.watch([path.watch.html], html);

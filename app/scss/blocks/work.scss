@@ -3,9 +3,13 @@
 	&__item {
 		width: 100%;
 		margin: 0px 0px 100px 0px;
-
+		
 		@media (max-width: 767.98px) {
 			margin-bottom: 70px;
+		}
+
+		&:last-child {
+			margin: 0;
 		}
 	}
 
@@ -15,6 +19,7 @@
 		img {
 			width: 100%;
 			max-width: 100%;
+			border: 1px solid #44445245;
 		}
 	}
 

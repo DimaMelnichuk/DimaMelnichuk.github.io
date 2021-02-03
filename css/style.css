@@ -4935,7 +4935,7 @@ body.night .switch-wrapper__moon {
 
 @media (max-width: 767.98px) {
   .work__item {
-    margin-bottom: 70px;
+    margin: 0px 0px 70px 0px;
   }
 
   .work__descr-list li {

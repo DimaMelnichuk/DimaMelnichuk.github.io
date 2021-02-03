@@ -4382,6 +4382,10 @@
   margin: 0px 0px 100px 0px;
 }
 
+.work__item:last-child {
+  margin: 0;
+}
+
 .work__item-img {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 75%;
@@ -4391,6 +4395,7 @@
 .work__item-img img {
   width: 100%;
   max-width: 100%;
+  border: 1px solid #44445245;
 }
 
 .work__descr {
